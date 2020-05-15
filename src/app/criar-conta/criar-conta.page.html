@@ -1,16 +1,17 @@
 <ion-header>
   <ion-toolbar color="primary">
     <ion-title>
-      Login
+      Criar conta
     </ion-title>
   </ion-toolbar>
 </ion-header>
+
 <!-- Início conteúdo da página-->
 <ion-content>
   <ion-card>
     <!--Header-->
     <ion-card-header>
-      <ion-card-title>Sistema ETEC</ion-card-title>
+      <ion-card-title>Realizar cadastro</ion-card-title>
     </ion-card-header>
     <!--Fim header-->
     <form [formGroup]="formLogin" (ngSubmit)="login()">
@@ -48,7 +49,6 @@
       <!--Ion item 2-->
       <br>
 
-      
       <!--Botões-->
       <ion-button expand="block" color="primary" type="submit">LOGIN!</ion-button>
       <ion-button expand="block" fill="outline" color="primary" routerLink="/criar-conta">CRIAR CONTA</ion-button>
