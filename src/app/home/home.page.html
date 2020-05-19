@@ -23,7 +23,8 @@
 
       <ng-container *ngFor="let erro of mensagens_validacao.email">
         <span
-          *ngIf="formLogin.get('email').hasError(erro.tipo) && (formLogin.get('email').dirty || formLogin.get('email').touched)" class="msg-erro">
+          *ngIf="formLogin.get('email').hasError(erro.tipo) && (formLogin.get('email').dirty || 
+          formLogin.get('email').touched)" class="msg-erro">
           {{erro.mensagem}}
         </span>
       </ng-container>
@@ -50,7 +51,7 @@
 
       
       <!--Botões-->
-      <ion-button expand="block" color="primary" type="submit">LOGIN!</ion-button>
+      <ion-button expand="block" color="primary" type="submit">LOGIN</ion-button>
       <ion-button expand="block" fill="outline" color="primary" routerLink="/criar-conta">CRIAR CONTA</ion-button>
     </form>
 

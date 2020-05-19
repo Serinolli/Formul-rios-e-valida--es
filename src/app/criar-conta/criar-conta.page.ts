@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ValidadorCpf } from '../validators/validador-cpf';
-import { ValidadorComparer } from '../validators/validador-comparer';
+import { ComparaValidator } from '../Validadores/compara-validador';
+import { CpfValidator } from '../Validadores/cpf-validator';
 import { Usuario } from '../models/Usuario';
 import { UsuarioService } from '../services/usuario.service';
 import { AlertController } from '@ionic/angular';
@@ -64,7 +64,7 @@ export class CriarContaPage implements OnInit {
     this.formCadastro = formBuilder.group({
       // Dica do tio: Aqui se declara todos os campos do formulario
       nome: ['', Validators.compose([Validators.required, Validators.minLength(3)])],
-      cpf: ['', Validators.compose([Validators.required, ValidadorCpf.cpfValido])],
+      cpf: ['', Validators.compose([Validators.required, CpfValidator.cpfValido])],
       sexo: ['', Validators.compose([Validators.required])],
       dataNascimento: ['', Validators.compose([Validators.required])],
       email: ['', Validators.compose([Validators.email, Validators.required])],
@@ -72,7 +72,7 @@ export class CriarContaPage implements OnInit {
       confirmaSenha: ['', Validators.compose([Validators.minLength(6), Validators.maxLength(8), Validators.required])]
     },
       {
-        validator: ValidadorComparer('senha', 'confirmaSenha')
+        validator: ComparaValidator('senha', 'confirmaSenha')
       }
     );
   }

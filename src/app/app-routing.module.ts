@@ -20,8 +20,8 @@ const routes: Routes = [
     loadChildren: () => import('./painel-usuario/painel-usuario.module').then( m => m.PainelUsuarioPageModule)
   },
   {
-    path: 'validador-cpf',
-    loadChildren: () => import('./validador-cpf/validador-cpf.module').then( m => m.ValidadorCpfPageModule)
+    path: 'cpf-validator',
+    loadChildren: () => import('./cpf-validator/cpf-validator.module').then( m => m.CpfValdiatorPageModule)
   },
 ];
 
