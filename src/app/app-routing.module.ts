@@ -21,7 +21,7 @@ const routes: Routes = [
   },
   {
     path: 'cpf-validator',
-    loadChildren: () => import('./cpf-validator/cpf-validator.module').then( m => m.CpfValdiatorPageModule)
+    loadChildren: () => import('./Validadores/cpf-validator').then( m => m.CpfValidator)
   },
 ];
 
